@@ -1,11 +1,34 @@
-var express = require('express');
-var app = express();
+// Dependencies
+var application_root = __dirname;
+    express = require('express'),
+    path = require('path'),
+    mongoose = require('mongoose');
 
+// Express Setup
+var app = express();
+var models = require('./models')
+
+app.use(express.static(path.join(application_root, "public")));
+
+// Schema
+var Schema = mongoose.Schema;
+var StatusProgramModel = mongoose.model('StatusProgram')
+
+// Routing
 app.get('/', function (req, res) {
   res.send('Hello World');
 });
 
-var server = app.listen(3000, function () {
+app.get('/api/programs', function(req, res) {
+	return StatusProgramModel.find(function(err, objs) {
+		if (!err) {
+			return res.send(objs);
+		}
+	});
+});
+
+// Server
+var server = app.listen(80, function () {
 
   var host = server.address().address;
   var port = server.address().port;
