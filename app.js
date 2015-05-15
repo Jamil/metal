@@ -30,19 +30,19 @@ app.get('/api/programs', function(req, res) {
 
 // Server
 
-var port;
+var use_port;
 
 try {
     stats = fs.lstatSync('TEST');
     if (stats.isFile()) {
-        port = 3000;
+        use_port = 3000;
     }
 }
-catch {
-    port = 80;
+catch (e) {
+    use_port = 80;
 }
 
-var server = app.listen(port, function () {
+var server = app.listen(use_port, function () {
 
   var host = server.address().address;
   var port = server.address().port;

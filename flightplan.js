@@ -11,6 +11,10 @@ plan.target('production', [
     ]
 );
 
+plan.local(function(local) {
+    local.exec('grunt');
+});
+
 plan.remote(function(remote) {
     remote.with('cd /metal/', function() {
         remote.log('Pull latest code from git');
@@ -22,8 +26,8 @@ plan.remote(function(remote) {
         remote.log('Install default data in Mongo');
         remote.exec('find ./models -name "*_defaults.js" | xargs mongo');
 
-        remote.log('Set environment file')
-        remote.exec('mv TEST PRODUCTION')
+        remote.log('Set environment file');
+        remote.exec('touch PRODUCTION');
 
         remote.log('Restart application');
         remote.exec('pm2 restart app.js');

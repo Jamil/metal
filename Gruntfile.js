@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 stderr: false
             },
             syncdb: {
-                command: 'echo "Install default data in Mongo" ; find ./models -name "*_defaults.js" | xargs mongo'
+                command: 'find ./models -name "*_defaults.js" | xargs mongo'
             }
         }
     });
