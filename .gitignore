@@ -1,2 +1,7 @@
 # Will be tracked by dependency manager
 node_modules/
+
+# Environment File
+TEST
+STAGING
+PRODUCTION
