@@ -10,6 +10,8 @@ plan.target('production', [
 );
 
 plan.local(function(local) {
+    local.exec('git diff --quiet');
+
     local.log('Install default data in Mongo');
     local.exec('find ./models -name "*_defaults.js" | xargs mongo');
 
