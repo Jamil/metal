@@ -10,7 +10,10 @@ plan.target('production', [
 );
 
 plan.local(function(local) {
+    local.log('Checking to see if there are any uncommitted changes')
     local.exec('git diff --quiet');
+
+    local.log('Checking to see if there are any unpushed changes')
     local.exec('git diff --quiet origin/master..HEAD');
 
     local.log('Install default data in Mongo');
