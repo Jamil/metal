@@ -141,6 +141,13 @@ var aa =
         ]
     };
 
-db.StatusProgram.update({ "name": "MileagePlus" }, { $set: mp }, { upsert: true });
-db.StatusProgram.update({ "name": "SkyMiles" }, { $set: sm }, { upsert: true });
-db.StatusProgram.update({ "name": "AAdvantage" }, { $set: aa }, { upsert: true });
+var results = [];
+results[0] = db.StatusProgram.update({ "_id": "MileagePlus" }, { $set: mp }, { upsert: true });
+results[1] = db.StatusProgram.update({ "_id": "SkyMiles" }, { $set: sm }, { upsert: true });
+results[2] = db.StatusProgram.update({ "_id": "AAdvantage" }, { $set: aa }, { upsert: true });
+
+var updated = results.reduce(function(a, b) {
+    return a.updatedExisting && b.updatedExisting;
+}, true);
+
+console.log(updated ? "Updated Existing" : "Created New");
