@@ -1,19 +1,23 @@
 {
-    "name": "metal",
-    "version": "1.0.0",
-    "description": "Metal",
-    "main": "index.js",
-    "private": true,
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.12.3",
-        "mongoose": "3.8.16"
-    },
-    "devDependencies": {
-        "flightplan": "^0.6.2"
-    }
+  "name": "metal",
+  "version": "1.0.0",
+  "description": "Metal",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3",
+    "mongoose": "3.8.16"
+  },
+  "devDependencies": {
+    "flightplan": "^0.6.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-shell": "^1.1.2",
+    "load-grunt-tasks": "^3.1.0"
+  }
 }
