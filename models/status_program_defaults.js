@@ -148,4 +148,4 @@ results[2] = db.StatusProgram.update({ "_id": "AAdvantage" }, { $set: aa }, { up
 
 results.map(function(result) {
     print(result);
-})
+});
