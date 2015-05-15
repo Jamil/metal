@@ -141,6 +141,6 @@ var aa =
         ]
     };
 
-db.StatusProgram.update({ "name": "MileagePlus" }, { $set: mp }, { upsert: "true" });
-db.StatusProgram.update({ "name": "SkyMiles" }, { $set: sm }, { upsert: "true" });
-db.StatusProgram.update({ "name": "AAdvantage" }, { $set: aa }, { upsert: "true" });
+db.StatusProgram.update({ "name": "MileagePlus" }, { $set: mp }, { upsert: true });
+db.StatusProgram.update({ "name": "SkyMiles" }, { $set: sm }, { upsert: true });
+db.StatusProgram.update({ "name": "AAdvantage" }, { $set: aa }, { upsert: true });
