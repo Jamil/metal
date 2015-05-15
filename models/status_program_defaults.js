@@ -7,6 +7,7 @@ db = conn.getDB("metal");
 
 var mp =
 	  {
+        "_id": "MileagePlus",
 		    "name": "MileagePlus",
 		    "airline": "United Airlines",
         "slugs": {
@@ -53,6 +54,7 @@ var mp =
 
 var sm =
 	  {
+        "_id": "SkyMiles",
 		    "name": "SkyMiles",
 		    "airline": "Delta Airlines",
         "slugs": {
@@ -99,6 +101,7 @@ var sm =
 
 var aa =
 	  {
+        "_id": "AAdvantage",
 		    "name": "AAdvantage",
 		    "airline": "American Airlines",
         "slugs": {
