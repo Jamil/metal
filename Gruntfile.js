@@ -11,14 +11,6 @@ module.exports = function(grunt) {
                     jQuery: false
                 }
             }
-        },
-        shell: {
-            options: {
-                stderr: false
-            },
-            syncdb: {
-                command: 'find ./models -name "*_defaults.js" | xargs mongo'
-            }
         }
     });
 
