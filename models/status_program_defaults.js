@@ -5,203 +5,139 @@ db = conn.getDB("metal");
  MILEAGEPLUS
  ***********/
 
-var mp = 
-	{
-		"name": "MileagePlus",
-		"airline": "United",
-		"tiers": [
-		{
-			"tier_name": "Premier Silver",
-			"mile_requirement": {
-				"threshold": 25000,
-				"slug": "PQM"
-			},
-			"segment_requirement": {
-				"threshold": 30,
-				"slug": "PQS"
-			},
-			"spend_requirement": {
-				"threshold": 3000,
-				"slug": "PQD"
-			}
-		},
-		{
-			"tier_name": "Premier Gold",
-			"mile_requirement": {
-				"threshold": 50000,
-				"slug": "PQM"
-			},
-			"segment_requirement": {
-				"threshold": 60,
-				"slug": "PQS"
-			},
-			"spend_requirement": {
-				"threshold": 6000,
-				"slug": "PQD"
-			}
-		},
-		{
-			"tier_name": "Premier Platinum",
-			"mile_requirement": {
-				"threshold": 75000,
-				"slug": "PQM"
-			},
-			"segment_requirement": {
-				"threshold": 90,
-				"slug": "PQS"
-			},
-			"spend_requirement": {
-				"threshold": 9000,
-				"slug": "PQD"
-			}
-		},
-		{
-			"tier_name": "Premier 1K",
-			"mile_requirement": {
-				"threshold": 100000,
-				"slug": "PQM"
-			},
-			"segment_requirement": {
-				"threshold": 120,
-				"slug": "PQS"
-			},
-			"spend_requirement": {
-				"threshold": 12000,
-				"slug": "PQD"
-			}
-		}
-		]
-	};
+var mp =
+	  {
+		    "name": "MileagePlus",
+		    "airline": "United Airlines",
+        "slugs": {
+            "mile": "PQM",
+            "segment": "PQS",
+            "spend": "PQD"
+        },
+        "tiers": [
+            {
+                "tier_name": "Premier Silver",
+                "level": 0,
+                "mile_threshold": 25000,
+                "segment_requirement": 30,
+                "spend_requirement": 3000
+            },
+            {
+                "tier_name": "Premier Gold",
+                "level": 1,
+                "mile_threshold": 50000,
+                "segment_requirement": 60,
+                "spend_requirement": 6000
+            },
+            {
+                "tier_name": "Premier Platinum",
+                "level": 2,
+                "mile_threshold": 75000,
+                "segment_requirement": 90,
+                "spend_requirement": 9000
+            },
+            {
+                "tier_name": "Premier 1K®",
+                "level": 3,
+                "mile_threshold": 100000,
+                "segment_requirement": 120,
+                "spend_requirement": 12000
+            }
+        ]
+    };
 
-/********
- SKYMILES
- ********/
 
-var sm = 
-	{
-		"name": "SkyMiles",
-		"airline": "Delta",
-		"tiers": [
-		{
-			"tier_name": "Silver Medallion",
-			"mile_requirement": {
-				"threshold": 25000,
-				"slug": "MQM"
-			},
-			"segment_requirement": {
-				"threshold": 30,
-				"slug": "MQS"
-			},
-			"spend_requirement": {
-				"threshold": 3000,
-				"slug": "MQD"
-			}
-		},
-		{
-			"tier_name": "Gold Medallion",
-			"mile_requirement": {
-				"threshold": 50000,
-				"slug": "MQM"
-			},
-			"segment_requirement": {
-				"threshold": 60,
-				"slug": "MQS"
-			},
-			"spend_requirement": {
-				"threshold": 6000,
-				"slug": "MQD"
-			}
-		},
-		{
-			"tier_name": "Platinum Medallion",
-			"mile_requirement": {
-				"threshold": 75000,
-				"slug": "MQM"
-			},
-			"segment_requirement": {
-				"threshold": 100,
-				"slug": "MQS"
-			},
-			"spend_requirement": {
-				"threshold": 9000,
-				"slug": "MQD"
-			}
-		},
-		{
-			"tier_name": "Diamond Medallion",
-			"mile_requirement": {
-				"threshold": 125000,
-				"slug": "MQM"
-			},
-			"segment_requirement": {
-				"threshold": 140,
-				"slug": "MQS"
-			},
-			"spend_requirement": {
-				"threshold": 15000,
-				"slug": "MQD"
-			}
-		}
-		]
-	};
+/***********
+   SKYMILES
+ ***********/
 
-/**********
- AADVANTAGE
- **********/
+var sm =
+	  {
+		    "name": "SkyMiles",
+		    "airline": "Delta Airlines",
+        "slugs": {
+            "mile": "MQM",
+            "segment": "MQS",
+            "spend": "MQD"
+        },
+        "tiers": [
+            {
+                "tier_name": "Silver Medallion",
+                "level": 0,
+                "mile_threshold": 25000,
+                "segment_requirement": 30,
+                "spend_requirement": 3000
+            },
+            {
+                "tier_name": "Gold Medallion",
+                "level": 1,
+                "mile_threshold": 50000,
+                "segment_requirement": 60,
+                "spend_requirement": 6000
+            },
+            {
+                "tier_name": "Platinum Medallion",
+                "level": 2,
+                "mile_threshold": 75000,
+                "segment_requirement": 100,
+                "spend_requirement": 9000
+            },
+            {
+                "tier_name": "Diamond Medallion",
+                "level": 3,
+                "mile_threshold": 125000,
+                "segment_requirement": 140,
+                "spend_requirement": 15000
+            }
+        ]
+    };
 
-var aa = 
-	{
-		"name": "AAdvantage",
-		"airline": "American",
-		"tiers": [
-		{
-			"tier_name": "AAdvantage Gold",
-			"mile_requirement": {
-				"threshold": 25000,
-				"slug": "EQM"
-			},
-			"segment_requirement": {
-				"threshold": 30,
-				"slug": "EQS"
-			},
-			"point_requirement": {
-				"threshold": 25000,
-				"slug": "EQP"
-			}
-		},
-		{
-			"tier_name": "AAdvantage Platinum",
-			"mile_requirement": {
-				"threshold": 50000,
-				"slug": "EQM"
-			},
-			"segment_requirement": {
-				"threshold": 60,
-				"slug": "EQS"
-			},
-			"point_requirement": {
-				"threshold": 50000,
-				"slug": "EQP"
-			}
-		},
-		{
-			"tier_name": "AAdvantage Executive Platinum",
-			"mile_requirement": {
-				"threshold": 100000,
-				"slug": "EQM"
-			},
-			"segment_requirement": {
-				"threshold": 120,
-				"slug": "EQS"
-			},
-			"point_requirement": {
-				"threshold": 100000,
-				"slug": "EQP"
-			}
-		}
-		]
-	};
 
-db['StatusProgram'].update({ "name": "MileagePlus" }, { $set: mp }, { upsert: "true" });
-db['StatusProgram'].update({ "name": "SkyMiles" }, { $set: sm }, { upsert: "true" });
-db['StatusProgram'].update({ "name": "AAdvantage" }, { $set: aa }, { upsert: "true" });
+/***********
+  AADVANTAGE
+ ***********/
+
+var aa =
+	  {
+		    "name": "AAdvantage",
+		    "airline": "American Airlines",
+        "slugs": {
+            "mile": "EQM",
+            "segment": "EQS",
+            "point": "EQP"
+        },
+        "tiers": [
+            {
+                "tier_name": "Silver Medallion",
+                "level": 0,
+                "mile_threshold": 25000,
+                "segment_requirement": 30,
+                "spend_requirement": 3000
+            },
+            {
+                "tier_name": "Gold Medallion",
+                "level": 1,
+                "mile_threshold": 50000,
+                "segment_requirement": 60,
+                "spend_requirement": 6000
+            },
+            {
+                "tier_name": "Platinum Medallion",
+                "level": 2,
+                "mile_threshold": 75000,
+                "segment_requirement": 100,
+                "spend_requirement": 9000
+            },
+            {
+                "tier_name": "Diamond Medallion",
+                "level": 3,
+                "mile_threshold": 125000,
+                "segment_requirement": 140,
+                "spend_requirement": 15000
+            }
+        ]
+    };
+
+db.StatusProgram.update({ "name": "MileagePlus" }, { $set: mp }, { upsert: "true" });
+db.StatusProgram.update({ "name": "SkyMiles" }, { $set: sm }, { upsert: "true" });
+db.StatusProgram.update({ "name": "AAdvantage" }, { $set: aa }, { upsert: "true" });
