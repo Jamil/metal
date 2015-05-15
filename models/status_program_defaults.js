@@ -146,6 +146,8 @@ results[0] = db.StatusProgram.update({ "_id": "MileagePlus" }, { $set: mp }, { u
 results[1] = db.StatusProgram.update({ "_id": "SkyMiles" }, { $set: sm }, { upsert: true });
 results[2] = db.StatusProgram.update({ "_id": "AAdvantage" }, { $set: aa }, { upsert: true });
 
+print('STATUS PROGRAM');
 results.map(function(result) {
     print(result);
 });
+print('\n');
