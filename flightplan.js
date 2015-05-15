@@ -1,7 +1,5 @@
-// flightplan.js
 var plan = require('flightplan');
 
-// configuration
 plan.target('production', [
     {
         host: 'crosswind.io',
@@ -12,7 +10,11 @@ plan.target('production', [
 );
 
 plan.local(function(local) {
+    local.log('Install default data in Mongo');
+    local.exec('find ./models -name "*_defaults.js" | xargs mongo');
+
     local.exec('grunt');
+    local.exec('pm2 restart app.js');
 });
 
 plan.remote(function(remote) {
