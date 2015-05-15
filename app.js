@@ -8,6 +8,7 @@ var application_root = __dirname,
 // Express Setup
 var app = express();
 var models = require('./models');
+var routes = require('./routes')(app);
 
 app.use(express.static(path.join(application_root, "public")));
 
@@ -15,17 +16,9 @@ app.use(express.static(path.join(application_root, "public")));
 var Schema = mongoose.Schema;
 var StatusProgramModel = mongoose.model('StatusProgram');
 
-// Routing
+// Routing for /
 app.get('/', function (req, res) {
   res.send('Hello World');
-});
-
-app.get('/api/programs', function(req, res) {
-	return StatusProgramModel.find(function(err, objs) {
-		if (!err) {
-			return res.send(objs);
-		}
-	});
 });
 
 // Server
