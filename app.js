@@ -1,28 +1,36 @@
 // Dependencies
-var application_root = __dirname,
-    express = require('express'),
-    path = require('path'),
-    fs = require('fs'),
-    mongoose = require('mongoose');
-
-// Express Setup
+var application_root = __dirname;
+var express = require('express');
 var app = express();
+
+var path = require('path');
+var fs = require('fs');
+var mongoose = require('mongoose');
+var cookieParser = require('cookie-parser');
+var flash = require('connect-flash');
+var passport = require('passport');
+var expressSession = require('express-session');
+
 var models = require('./models');
 var routes = require('./routes')(app);
+
+// Configuring Express
+app.engine('.html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(express.static(path.join(application_root, "public")));
 
 // Schema
-var Schema = mongoose.Schema;
 var StatusProgramModel = mongoose.model('StatusProgram');
 
-// Routing for /
-app.get('/', function (req, res) {
-  res.send('Hello World');
+app.get('/', function(req, res){
+    res.render('index');
 });
 
 // Server
-
 var use_port;
 
 try {
