@@ -10,15 +10,6 @@ String.prototype.toCamel = function(){
     return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
-
-String.prototype.toCamel = function(){
-    var str = this.replace(/([-_][a-z])/g,
-                        function($1) {
-                            return $1.toUpperCase().replace(/[-_]/,'');
-                        });
-    return str.charAt(0).toUpperCase() + str.slice(1);
-};
-
 var files = fs.readdirSync(process.cwd() + '/json/');
 files = files.filter(function(n) {
     // Ignore routes right now until we upgrade to a more memory-heavy machine
