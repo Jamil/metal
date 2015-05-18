@@ -26,6 +26,9 @@ function makeSchema(filename, headers, sampleLine) {
         schemaDict[headers[i]] = type.toCamel();
     }
 
+    // Plus, everything should have an ID
+    schemaDict['_id'] = 'String';
+
     var templateContents = fs.readFileSync('schema/template', 'utf8');
     var result = templateContents.replace(/MODEL_NAME/g, name.toCamel());
 
@@ -76,14 +79,26 @@ function toJSON(filename) {
     var headers = array[0].split('\t');
     headers = headers.map(function(str) { return str.trim(); });
 
+    var noID = true;
+    for (var i = 0; i < headers.length; i++) {
+        if (headers[i] == "_id")
+            noID = false;
+    }
+
     for (var i = 1; i < array.length; i++) {
         var row = array[i];
         var cols = row.split('\t');
         cols = cols.map(function(str) { return str.trim(); });
 
+        var summary = '';
+
         var obj = {};
         for (var j = 0; j < headers.length; j++) {
             if (cols[j]) {
+                if (j < 3) {
+                    summary += cols[j];
+                }
+
                 var writeValue = cols[j];
                 if (writeValue == '*') writeValue = true;
                 obj[headers[j]] = writeValue;
@@ -92,6 +107,11 @@ function toJSON(filename) {
                 obj[headers[j]] = null;
             }
         }
+
+        if (noID) {
+            obj['_id'] = summary;
+        }
+
         output.push(obj);
     }
 

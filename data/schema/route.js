@@ -7,7 +7,8 @@ var Route = new Schema( {
   to: String,
   codeshare: String,
   stops: String,
-  equipment: String
+  equipment: String,
+  _id: String
 } );
 
 module.exports = mongoose.model('Route', Route, 'Route');

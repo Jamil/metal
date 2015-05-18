@@ -21,7 +21,7 @@ String.prototype.toCamel = function(){
 
 var files = fs.readdirSync(process.cwd() + '/json/');
 files = files.filter(function(n) {
-    return (n.match('.*\.json') != null) && n != 'route.json';
+    return (n.match('.*\.json') != null);
 });
 
 var objs = {};
