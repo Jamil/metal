@@ -4,5 +4,5 @@ var fs = require('fs');
 mongoose.connect('mongodb://localhost/metal');
 
 fs.readdirSync(__dirname).forEach(function (file) {
-    require(__dirname+'/'+file)
-})
+    require(__dirname+'/'+file);
+});
