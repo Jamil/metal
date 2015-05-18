@@ -1,0 +1,16 @@
+// Dependencies
+var mongoose = require('mongoose')
+
+// Models
+var MODEL = mongoose.model('MODEL')
+
+// Routes
+module.exports = function(app){
+    app.get('/api/MODEL_LOWs/', function(req, res) {
+        return MODEL.find(function(err, objs) {
+            if (!err) {
+                return res.send(objs);
+            }
+        });
+    });
+}

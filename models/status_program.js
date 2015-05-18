@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var StatusProgram = new Schema({
+    _id: String,
 	  name: String,
 	  airline: String,
     slugs: {

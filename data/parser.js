@@ -1,18 +1,75 @@
 var fs = require('fs');
 var lazy = require('lazy');
 
+String.prototype.toCamel = function(){
+    var str = this.replace(/([-_][a-z])/g, function($1){return $1.toUpperCase().replace(/[-_]/,'');});
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 function getDataFiles() {
-    var files = fs.readdirSync(process.cwd());
+    var files = fs.readdirSync(process.cwd() + '/dat/');
     files = files.filter(function(n) {
         return (n.match('.*\.dat') != null);
     });
     return files;
 }
 
+function makeSchema(filename, headers, sampleLine) {
+    var pathComponents = filename.split('.');
+    var name = pathComponents[0];
+    var outFile1 = 'schema/' + name + '.js';
+    var outFile2 = '../models/' + name + '.js';
+
+    schemaDict = {};
+    for (var i = 0; i < headers.length; i++) {
+        var type = typeof(sampleLine[i]);
+        schemaDict[headers[i]] = type.toCamel();
+    }
+
+    var templateContents = fs.readFileSync('schema/template', 'utf8');
+    var result = templateContents.replace(/MODEL_NAME/g, name.toCamel());
+
+    var schemaContent = JSON.stringify(schemaDict, null, 2);
+    schemaContent = schemaContent.replace(/"/g, '');
+
+    result = result.replace('SCHEMA', schemaContent);
+
+    fs.writeFile(outFile1, result, function(err) {
+        if (err) console.log(err);
+        else {
+            console.log(('dat/' + filename) + ' > ' + outFile1);
+        }
+    });
+
+    fs.writeFile(outFile2, result, function(err) {
+        if (err) console.log(err);
+        else {
+            console.log(('dat/' + filename) + ' > ' + outFile2);
+        }
+    });
+}
+
+function makeRoute(filename) {
+    var pathComponents = filename.split('.');
+    var name = pathComponents[0];
+    var outFile = '../routes/' + name + '.js';
+
+    var templateContents = fs.readFileSync('routes/template', 'utf8');
+    var result = templateContents.replace('MODEL_LOW', name);
+    result = result.replace(/MODEL/g, name.toCamel());
+
+    fs.writeFile(outFile, result, function(err) {
+        if (err) console.log(err);
+        else {
+            console.log(('dat/' + filename) + ' > ' + outFile);
+        }
+    });
+}
+
 function toJSON(filename) {
     var output = [];
 
-    var array = fs.readFileSync(filename).toString().split('\n').filter(function(line) {
+    var array = fs.readFileSync('dat/' + filename).toString().split('\n').filter(function(line) {
         return line.length > 0;
     });
 
@@ -27,7 +84,9 @@ function toJSON(filename) {
         var obj = {};
         for (var j = 0; j < headers.length; j++) {
             if (cols[j]) {
-                obj[headers[j]] = cols[j];
+                var writeValue = cols[j];
+                if (writeValue == '*') writeValue = true;
+                obj[headers[j]] = writeValue;
             }
             else {
                 obj[headers[j]] = null;
@@ -38,16 +97,20 @@ function toJSON(filename) {
 
     var json = JSON.stringify(output, null, 2);
     var pathComponents = filename.split('.');
-    var outFile = pathComponents[0] + '.json';
+    var outFile = 'json/' + pathComponents[0] + '.json';
 
     fs.writeFile(outFile, json, function(err) {
         if (err) {
             console.log(err);
         }
         else {
-            console.log(filename + ' > ' + outFile);
+            console.log(('dat/' + filename) + ' > ' + outFile);
         }
     });
+
+    var sampleLine = array[1];
+    makeSchema(filename, headers, sampleLine);
+    makeRoute(filename);
 }
 
 getDataFiles().map(toJSON);

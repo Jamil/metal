@@ -90,32 +90,25 @@
         },
         "tiers": [
             {
-                "tier_name": "Silver Medallion",
+                "tier_name": "Gold",
                 "level": 0,
                 "mile_threshold": 25000,
-                "segment_requirement": 30,
-                "spend_requirement": 3000
+                "point_threshold": 25000,
+                "segment_requirement": 30
             },
             {
-                "tier_name": "Gold Medallion",
+                "tier_name": "Platinum",
                 "level": 1,
                 "mile_threshold": 50000,
                 "segment_requirement": 60,
-                "spend_requirement": 6000
+                "point_requirement": 50000
             },
             {
-                "tier_name": "Platinum Medallion",
+                "tier_name": "Executive Platinum",
                 "level": 2,
-                "mile_threshold": 75000,
-                "segment_requirement": 100,
-                "spend_requirement": 9000
-            },
-            {
-                "tier_name": "Diamond Medallion",
-                "level": 3,
-                "mile_threshold": 125000,
-                "segment_requirement": 140,
-                "spend_requirement": 15000
+                "mile_threshold": 100000,
+                "segment_requirement": 120,
+                "point_requirement": 100000
             }
         ]
     }

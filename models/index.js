@@ -1,5 +1,8 @@
 var mongoose = require('mongoose');
+var fs = require('fs');
+
 mongoose.connect('mongodb://localhost/metal');
 
-exports.StatusProgram = require('./status_program');
-exports.Airline = require('./airline');
+fs.readdirSync(__dirname).forEach(function (file) {
+    require(__dirname+'/'+file)
+})

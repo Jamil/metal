@@ -31,8 +31,11 @@ plan.remote(function(remote) {
         remote.log('Install dependencies');
         remote.exec('npm install');
 
-        remote.log('Install default data in Mongo');
-        remote.exec('find ./models -name "*_defaults.js" | xargs mongo');
+        remote.with('cd data', function() {
+            remote.log('Install default data in Mongo');
+            remote.exec('node parser.js');
+            remote.exec('node install.js');
+        });
 
         remote.log('Set environment file');
         remote.exec('touch PRODUCTION');
