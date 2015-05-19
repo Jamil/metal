@@ -7,10 +7,26 @@ var Route = mongoose.model('Route')
 // Routes
 module.exports = function(app){
     app.get('/api/routes/', function(req, res) {
-        return Route.find(function(err, objs) {
+        var queries = {};
+
+        for (key in req.query) {
+            if (Route.schema.path(key)) {
+                queries[key] = req.query[key];
+            }
+        }
+
+        return Route.find(queries, function(err, objs) {
             if (!err) {
-                return res.send(objs);
+                return res.json(objs);
             }
         });
     });
+
+    app.get('/api/Route_LOWs/:id', function(req, res) {
+        Route.findById(req.params.id, function(err, obj) {
+            if (err)
+                res.send(err);
+            res.json(obj);
+        })
+    })
 }

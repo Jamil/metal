@@ -13,6 +13,7 @@ var StatusProgram = new Schema({
         point: String
     },
 	  tiers: [{
+		    _id: String,
 		    tier_name: String,
 		    level: Number,
 		    mile_threshold: Number,

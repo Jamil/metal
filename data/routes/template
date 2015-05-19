@@ -7,10 +7,26 @@ var MODEL = mongoose.model('MODEL')
 // Routes
 module.exports = function(app){
     app.get('/api/MODEL_LOWs/', function(req, res) {
-        return MODEL.find(function(err, objs) {
+        var queries = {};
+
+        for (key in req.query) {
+            if (MODEL.schema.path(key)) {
+                queries[key] = req.query[key];
+            }
+        }
+
+        return MODEL.find(queries, function(err, objs) {
             if (!err) {
-                return res.send(objs);
+                return res.json(objs);
             }
         });
     });
+
+    app.get('/api/MODEL_LOWs/:id', function(req, res) {
+        MODEL.findById(req.params.id, function(err, obj) {
+            if (err)
+                res.send(err);
+            res.json(obj);
+        })
+    })
 }

@@ -2,7 +2,7 @@
 	  {
         "_id": "MileagePlus",
 		    "name": "MileagePlus",
-		    "airline": "United Airlines",
+		    "airline": "UA",
         "slugs": {
             "mile": "PQM",
             "segment": "PQS",
@@ -10,6 +10,7 @@
         },
         "tiers": [
             {
+                "_id": "2P",
                 "tier_name": "Premier Silver",
                 "level": 0,
                 "mile_threshold": 25000,
@@ -17,6 +18,7 @@
                 "spend_requirement": 3000
             },
             {
+                "_id": "1P",
                 "tier_name": "Premier Gold",
                 "level": 1,
                 "mile_threshold": 50000,
@@ -24,6 +26,7 @@
                 "spend_requirement": 6000
             },
             {
+                "_id": "PP",
                 "tier_name": "Premier Platinum",
                 "level": 2,
                 "mile_threshold": 75000,
@@ -31,6 +34,7 @@
                 "spend_requirement": 9000
             },
             {
+                "_id": "1K",
                 "tier_name": "Premier 1K®",
                 "level": 3,
                 "mile_threshold": 100000,
@@ -42,7 +46,7 @@
 	  {
         "_id": "SkyMiles",
 		    "name": "SkyMiles",
-		    "airline": "Delta Airlines",
+		    "airline": "DL",
         "slugs": {
             "mile": "MQM",
             "segment": "MQS",
@@ -50,6 +54,7 @@
         },
         "tiers": [
             {
+                "_id": "FO",
                 "tier_name": "Silver Medallion",
                 "level": 0,
                 "mile_threshold": 25000,
@@ -57,6 +62,7 @@
                 "spend_requirement": 3000
             },
             {
+                "_id": "GM",
                 "tier_name": "Gold Medallion",
                 "level": 1,
                 "mile_threshold": 50000,
@@ -64,6 +70,8 @@
                 "spend_requirement": 6000
             },
             {
+                "_id": "PM",
+                "tier_name": "Gold Medallion",
                 "tier_name": "Platinum Medallion",
                 "level": 2,
                 "mile_threshold": 75000,
@@ -71,6 +79,7 @@
                 "spend_requirement": 9000
             },
             {
+                "_id": "DM",
                 "tier_name": "Diamond Medallion",
                 "level": 3,
                 "mile_threshold": 125000,
@@ -82,7 +91,7 @@
 	  {
         "_id": "AAdvantage",
 		    "name": "AAdvantage",
-		    "airline": "American Airlines",
+		    "airline": "AA",
         "slugs": {
             "mile": "EQM",
             "segment": "EQS",
@@ -90,6 +99,7 @@
         },
         "tiers": [
             {
+                "_id": "GLD",
                 "tier_name": "Gold",
                 "level": 0,
                 "mile_threshold": 25000,
@@ -97,6 +107,7 @@
                 "segment_requirement": 30
             },
             {
+                "_id": "PLT",
                 "tier_name": "Platinum",
                 "level": 1,
                 "mile_threshold": 50000,
@@ -104,6 +115,7 @@
                 "point_requirement": 50000
             },
             {
+                "_id": "EXP",
                 "tier_name": "Executive Platinum",
                 "level": 2,
                 "mile_threshold": 100000,

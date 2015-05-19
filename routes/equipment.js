@@ -7,10 +7,26 @@ var Equipment = mongoose.model('Equipment')
 // Routes
 module.exports = function(app){
     app.get('/api/equipments/', function(req, res) {
-        return Equipment.find(function(err, objs) {
+        var queries = {};
+
+        for (key in req.query) {
+            if (Equipment.schema.path(key)) {
+                queries[key] = req.query[key];
+            }
+        }
+
+        return Equipment.find(queries, function(err, objs) {
             if (!err) {
-                return res.send(objs);
+                return res.json(objs);
             }
         });
     });
+
+    app.get('/api/Equipment_LOWs/:id', function(req, res) {
+        Equipment.findById(req.params.id, function(err, obj) {
+            if (err)
+                res.send(err);
+            res.json(obj);
+        })
+    })
 }
