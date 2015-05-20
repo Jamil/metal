@@ -2,13 +2,12 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var Route = new Schema( {
+  _id: String,
   airline: String,
   from: String,
   to: String,
-  codeshare: String,
-  stops: String,
-  equipment: String,
-  _id: String
-} );
+  codeshare: Boolean,
+  equipment: [String],
+  stops: Integer );
 
 module.exports = mongoose.model('Route', Route, 'Route');

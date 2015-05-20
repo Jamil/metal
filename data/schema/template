@@ -1,6 +1,0 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-
-var MODEL_NAME = new Schema( SCHEMA );
-
-module.exports = mongoose.model('MODEL_NAME', MODEL_NAME, 'MODEL_NAME');

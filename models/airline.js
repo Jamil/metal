@@ -3,7 +3,6 @@ var Schema = mongoose.Schema;
 
 var Airline = new Schema( {
   _id: String,
-  name: String
-} );
+  name: String );
 
 module.exports = mongoose.model('Airline', Airline, 'Airline');
