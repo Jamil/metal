@@ -6,7 +6,7 @@ var Airport = new Schema( {
     loc: {
         type: [Number],
         index: '2d'
-    
+    },
     name: String
 } );
 
