@@ -22,7 +22,7 @@ module.exports = function(app){
         });
     });
 
-    app.get('/api/Route_LOWs/:id', function(req, res) {
+    app.get('/api/routes/:id', function(req, res) {
         Route.findById(req.params.id, function(err, obj) {
             if (err)
                 res.send(err);

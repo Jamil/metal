@@ -10,9 +10,7 @@ module.exports = function(app){
         var queries = {};
 
         for (key in req.query) {
-            if (StatusProgramModel.schema.path(key)) {
-                queries[key] = req.query[key];
-            }
+            queries[key] = req.query[key];
         }
 
         return StatusProgramModel.find(queries, function(err, objs) {

@@ -5,7 +5,10 @@ var Schema = mongoose.Schema;
 var StatusProgram = new Schema({
     _id: String,
 	  name: String,
-	  airline: String,
+	  airline: {
+        type: String,
+        ref: 'Airline'
+    },
     slugs: {
         mile: String,
         segment: String,
