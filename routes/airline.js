@@ -22,7 +22,7 @@ module.exports = function(app){
         });
     });
 
-    app.get('/api/Airline_LOWs/:id', function(req, res) {
+    app.get('/api/airlines/:id', function(req, res) {
         Airline.findById(req.params.id, function(err, obj) {
             if (err)
                 res.send(err);

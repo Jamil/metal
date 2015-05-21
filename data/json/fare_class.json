@@ -1,0 +1,306 @@
+[
+    {
+        "_id": "AAA",
+        "fare": "A",
+        "name": "Discount First",
+        "airline": "AA",
+        "class_of_service": "First",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.5
+            }
+        ]
+    },
+    {
+        "_id": "AAB",
+        "fare": "B",
+        "name": "Full-fare Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.0
+            }
+        ]
+    },
+    {
+        "_id": "AAD",
+        "fare": "D",
+        "name": "Discount Business",
+        "airline": "AA",
+        "class_of_service": "Business",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.25
+            }
+        ]
+    },
+    {
+        "_id": "AAF",
+        "fare": "F",
+        "name": "Full-fare First",
+        "airline": "AA",
+        "class_of_service": "First",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.5
+            }
+        ]
+    },
+    {
+        "_id": "AAG",
+        "fare": "G",
+        "name": "Deep-discount Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 0.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.0
+            }
+        ]
+    },
+    {
+        "_id": "AAH",
+        "fare": "H",
+        "name": "Discount Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.0
+            }
+        ]
+    },
+    {
+        "_id": "AAI",
+        "fare": "I",
+        "name": "Discount Business",
+        "airline": "AA",
+        "class_of_service": "Business",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.25
+            }
+        ]
+    },
+    {
+        "_id": "AAJ",
+        "fare": "J",
+        "name": "Full-fare Business",
+        "airline": "AA",
+        "class_of_service": "Business",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.25
+            }
+        ]
+    },
+    {
+        "_id": "AAK",
+        "fare": "K",
+        "name": "Discount Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.00
+            }
+        ]
+    },
+    {
+        "_id": "AAL",
+        "fare": "L",
+        "name": "Discount Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.00
+            }
+        ]
+    },
+    {
+        "_id": "AAM",
+        "fare": "M",
+        "name": "Discount Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.00
+            }
+        ]
+    },
+    {
+        "_id": "AAN",
+        "fare": "N",
+        "name": "Deep-discount Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 0.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.00
+            }
+        ]
+    },
+    {
+        "_id": "AAO",
+        "fare": "O",
+        "name": "Deep-discount Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 0.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.00
+            }
+        ]
+    },
+    {
+        "_id": "AAP",
+        "fare": "P",
+        "name": "Discount First",
+        "airline": "AA",
+        "class_of_service": "First",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.5
+            }
+        ]
+    },
+    {
+        "_id": "AAQ",
+        "fare": "Q",
+        "name": "Deep-discount Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 0.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.0
+            }
+        ]
+    },
+    {
+        "_id": "AAS",
+        "fare": "S",
+        "name": "Deep-discount Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 0.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.0
+            }
+        ]
+    },
+    {
+        "_id": "AAV",
+        "fare": "V",
+        "name": "Discount Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.0
+            }
+        ]
+    },
+    {
+        "_id": "AAW",
+        "fare": "W",
+        "name": "Discount Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.0
+            }
+        ]
+    },
+    {
+        "_id": "AAY",
+        "fare": "Y",
+        "name": "Full-fare Economy",
+        "airline": "AA",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "AAdvantage",
+                "mile_credit": 1.0,
+                "point_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 1.0
+            }
+        ]
+    }
+]
