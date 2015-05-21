@@ -12,7 +12,6 @@ String.prototype.toCamel = function(){
 
 var files = fs.readdirSync(process.cwd() + '/json/');
 files = files.filter(function(n) {
-    // Ignore routes right now until we upgrade to a more memory-heavy machine
     return (n.match('.*\.json') != null);
 });
 

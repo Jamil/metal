@@ -12,6 +12,7 @@ var Flight = new Schema({
         type: String,
         ref: 'Airline'
     },
+    flight_number: Number,
     status_account: {
         type: String,
         ref: 'StatusAccount'
