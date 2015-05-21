@@ -18,9 +18,6 @@ var routes = require('./routes')(app);
 app.engine('.html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
-app.use(passport.initialize());
-app.use(passport.session());
-
 app.use(express.static(path.join(application_root, "public")));
 
 // Server
