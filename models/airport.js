@@ -5,7 +5,7 @@ var Airport = new Schema( {
     _id: String,
     loc: {
         type: [Number],
-        index: '2d'
+        index: '2dsphere'
     },
     name: String
 } );

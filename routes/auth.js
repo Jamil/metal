@@ -1,5 +1,5 @@
 // Dependencies
-var passport = require('passport')
+var passport = require('passport');
 
 var isAuthenticated = function (req, res, next) {
     // if user is authenticated in the session, call the next() to call the next request handler
@@ -9,7 +9,7 @@ var isAuthenticated = function (req, res, next) {
         return next();
     // if the user is not authenticated then redirect him to the login page
     res.redirect('/');
-}
+};
 
 // Routes
 module.exports = function(app) {
@@ -40,4 +40,4 @@ module.exports = function(app) {
         req.logout();
         res.redirect('/');
     });
-}
+};

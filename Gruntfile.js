@@ -5,6 +5,7 @@ module.exports = function(grunt) {
             files: ['Gruntfile.js',
                     'flightplan.js',
                     'app.js',
+                    'routes/*.js',
                     'models/*.js'],
             options: {
                 globals: {

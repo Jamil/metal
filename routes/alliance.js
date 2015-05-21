@@ -1,15 +1,15 @@
 // Dependencies
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
 
 // Models
-var Alliance = mongoose.model('Alliance')
+var Alliance = mongoose.model('Alliance');
 
 // Routes
 module.exports = function(app){
     app.get('/api/alliances/', function(req, res) {
         var queries = {};
 
-        for (key in req.query) {
+        for (var key in req.query) {
             if (Alliance.schema.path(key)) {
                 queries[key] = req.query[key];
             }
@@ -27,6 +27,6 @@ module.exports = function(app){
             if (err)
                 res.send(err);
             res.json(obj);
-        })
-    })
-}
+        });
+    });
+};

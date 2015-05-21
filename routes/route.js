@@ -1,15 +1,15 @@
 // Dependencies
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
 
 // Models
-var Route = mongoose.model('Route')
+var Route = mongoose.model('Route');
 
 // Routes
 module.exports = function(app){
     app.get('/api/routes/', function(req, res) {
         var queries = {};
 
-        for (key in req.query) {
+        for (var key in req.query) {
             if (Route.schema.path(key)) {
                 queries[key] = req.query[key];
             }
@@ -27,6 +27,6 @@ module.exports = function(app){
             if (err)
                 res.send(err);
             res.json(obj);
-        })
-    })
-}
+        });
+    });
+};

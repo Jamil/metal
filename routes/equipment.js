@@ -1,15 +1,15 @@
 // Dependencies
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
 
 // Models
-var Equipment = mongoose.model('Equipment')
+var Equipment = mongoose.model('Equipment');
 
 // Routes
 module.exports = function(app){
     app.get('/api/equipments/', function(req, res) {
         var queries = {};
 
-        for (key in req.query) {
+        for (var key in req.query) {
             if (Equipment.schema.path(key)) {
                 queries[key] = req.query[key];
             }
@@ -27,6 +27,6 @@ module.exports = function(app){
             if (err)
                 res.send(err);
             res.json(obj);
-        })
-    })
-}
+        });
+    });
+};
