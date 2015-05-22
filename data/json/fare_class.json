@@ -302,5 +302,365 @@
                 "rdm_credit": 1.0
             }
         ]
+    },
+    {
+        "_id": "DLF",
+        "fare": "F",
+        "name": "Full-fare First",
+        "airline": "DL",
+        "class_of_service": "First",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 2.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLA",
+        "fare": "A",
+        "name": "Discount First",
+        "airline": "DL",
+        "class_of_service": "First",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLP",
+        "fare": "P",
+        "name": "Discount First",
+        "airline": "DL",
+        "class_of_service": "First",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLG",
+        "fare": "G",
+        "name": "Discount First",
+        "airline": "DL",
+        "class_of_service": "First",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLJ",
+        "fare": "J",
+        "name": "Full-fare Business",
+        "airline": "DL",
+        "class_of_service": "Business",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 2.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLC",
+        "fare": "C",
+        "name": "Discount Business",
+        "airline": "DL",
+        "class_of_service": "Business",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLD",
+        "fare": "D",
+        "name": "Discount Business",
+        "airline": "DL",
+        "class_of_service": "Business",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLI",
+        "fare": "I",
+        "name": "Discount Business",
+        "airline": "DL",
+        "class_of_service": "Business",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLZ",
+        "fare": "Z",
+        "name": "Discount Business",
+        "airline": "DL",
+        "class_of_service": "Business",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLW",
+        "fare": "W",
+        "name": "Premium Economy",
+        "airline": "DL",
+        "class_of_service": "Premium Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLY",
+        "fare": "Y",
+        "name": "Full-fare Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLB",
+        "fare": "B",
+        "name": "Full-fare Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.5,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLM",
+        "fare": "M",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLS",
+        "fare": "S",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLH",
+        "fare": "H",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLQ",
+        "fare": "Q",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLQ",
+        "fare": "Q",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLK",
+        "fare": "K",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLL",
+        "fare": "L",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLU",
+        "fare": "U",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLT",
+        "fare": "T",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLX",
+        "fare": "X",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLV",
+        "fare": "V",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
+    },
+    {
+        "_id": "DLE",
+        "fare": "E",
+        "name": "Discount Economy",
+        "airline": "DL",
+        "class_of_service": "Economy",
+        "credit": [
+            {
+                "status_program": "SkyMiles",
+                "mile_credit": 1.0,
+                "segment_credit": 1.0,
+                "rdm_credit": 5.0
+            }
+        ]
     }
 ]
