@@ -41,9 +41,17 @@ module.exports = function(app){
             "airline": req.params.airline,
             "fare": req.params.id
         }, function(err, obj) {
-            if (err)
+            if (err) {
                 res.send(err);
-            res.json(obj);
+            }
+            else if (obj) {
+                res.json(obj);
+            }
+            else {
+                res.status(404).json({
+                    "error": ("The fare class " + req.params.id + " on " + req.params.airline + " was not found. Ensure that you are not specifying an award fare class.")
+                });
+            }
         });
     });
 
@@ -54,7 +62,14 @@ module.exports = function(app){
         }, function(err, obj) {
             if (err)
                 res.send(err);
-            res.json(obj.credit);
+            if (obj) {
+                res.json(obj.credit);
+            }
+            else {
+                res.status(404).json({
+                    "error": ("The fare class " + req.params.id + " on " + req.params.airline + " was not found. Ensure that you are not specifying an award fare class.")
+                });
+            }
         });
     });
 
@@ -65,13 +80,18 @@ module.exports = function(app){
         }, function(err, obj) {
             if (err)
                 res.send(err);
+            if (!obj) {
+                res.status(404).json({
+                    "error": ("The fare class " + req.params.id + " on " + req.params.airline + " was not found. Ensure that you are not specifying an award fare class.")
+                });
+            }
             for (var i = 0; i < obj.credit.length; i++) {
                 if (obj.credit[i].status_program == req.params.program) {
                     res.json(obj.credit[i]);
                 }
             }
             res.status(404).json({
-                "Not Found": ("The fare class " + req.params.id + " on " + req.params.airline + " cannot be credited to " + req.params.program)
+                "error": ("The fare class " + req.params.id + " on " + req.params.airline + " cannot be credited to " + req.params.program)
             });
         });
     });
