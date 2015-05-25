@@ -49,7 +49,7 @@ module.exports = function(app){
             }
             else {
                 res.status(404).json({
-                    "error": ("The fare class " + req.params.id + " on " + req.params.airline + " was not found. Ensure that you are not specifying an award fare class.")
+                    "Not Found": ("The fare class " + req.params.id + " on " + req.params.airline + " was not found. Ensure that you are not specifying an award fare class.")
                 });
             }
         });
@@ -67,7 +67,7 @@ module.exports = function(app){
             }
             else {
                 res.status(404).json({
-                    "error": ("The fare class " + req.params.id + " on " + req.params.airline + " was not found. Ensure that you are not specifying an award fare class.")
+                    "Not Found": ("The fare class " + req.params.id + " on " + req.params.airline + " was not found. Ensure that you are not specifying an award fare class.")
                 });
             }
         });
