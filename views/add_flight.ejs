@@ -1,0 +1,55 @@
+<!-- views/add_flight.ejs -->
+<!doctype html>
+<html>
+  <head>
+    <title>Add Flight</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <style>
+      body        { padding-top:80px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="col-sm-6 col-sm-offset-3">
+
+        <h1><span class="fa fa-sign-in"></span> Add Flight</h1>
+
+        <!-- LOGIN FORM -->
+        <form action="/addflight/" method="post">
+          <div class="form-group">
+            <label>Airline</label>
+            <input type="text" class="form-control" name="airline">
+          </div>
+          <div class="form-group">
+            <label>Flight Number</label>
+            <input type="text" class="form-control" name="flight_number">
+          </div>
+          <div class="form-group">
+            <label>Credit to</label>
+            <input type="text" class="form-control" name="status_account">
+          </div>
+          <div class="form-group">
+            <label>Origin</label>
+            <input type="text" class="form-control" name="origin">
+          </div>
+          <div class="form-group">
+            <label>Destination</label>
+            <input type="text" class="form-control" name="destination">
+          </div>
+          <div class="form-group">
+            <label>Fare Class</label>
+            <input type="text" class="form-control" name="fare_class">
+          </div>
+          <button type="submit" class="btn btn-warning btn-lg">Add Flight</button>
+        </form>
+
+        <hr>
+        <p>Or go <a href="/profile">back</a>.</p>
+
+      </div>
+
+    </div>
+  </body>
+</html>
