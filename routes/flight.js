@@ -15,7 +15,7 @@ module.exports = function(app){
             queries[key] = req.query[key];
         }
 
-        queries['user'] = req.user;
+        queries.user = req.user;
 
         return Flight.find(queries, function(err, objs) {
             if (!err) {
@@ -27,7 +27,7 @@ module.exports = function(app){
     app.post('/api/flights/', function(req, res) {
         var obj = {};
 
-        obj['user'] = req.user;
+        obj.user = req.user;
 
         for (var key in req.body) {
             if (Flight.schema.path(key)) {
