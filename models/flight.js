@@ -3,7 +3,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var Flight = new Schema({
-    _id: String,
     user: {
         type: String,
         ref: 'User'

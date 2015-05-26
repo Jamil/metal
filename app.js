@@ -23,7 +23,12 @@ app.use(cookieParser('secret')); // read cookies (needed for auth)
 app.use(bodyParser()); // get information from html forms
 
 // required for passport
-app.use(session({ secret: 'sessionsecret' })); // session secret
+app.use(session({
+    secret: 'sessionsecret',
+    cookie : {
+        maxAge: 3600000
+    }
+}));
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 require('./config/passport')(passport);

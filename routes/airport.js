@@ -84,7 +84,7 @@ module.exports = function(app){
         var latitude = false;
         var longitude= false;
         for (var key in req.query) {
-            if (Airport.schema.path(key)) {
+           if (Airport.schema.path(key)) {
                 queries[key] = req.query[key];
             }
             else if (key == 'latitude') {
