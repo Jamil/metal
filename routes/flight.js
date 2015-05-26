@@ -36,12 +36,21 @@ module.exports = function(app){
         }
 
         var newFlight = new Flight(obj);
-        newFlight.save(function(err, obj) {
+        newFlight.validate(function(err, obj) {
             if (err) {
                 this.res.status(400).json(err);
             }
             else {
-                this.res.json(obj);
+                save(function(err, obj) {
+                    if (err) {
+                        this.res.status(400).json(err);
+                    }
+                    else {
+                        this.res.json(obj);
+                    }
+                }.bind({
+                    "res": res
+                }));
             }
         }.bind({
             "res": res

@@ -16,3 +16,5 @@ var StatusAccount = new Schema({
     },
     flights: [Flight]
 });
+
+module.exports = mongoose.model('StatusAccount', StatusAccount, 'StatusAccount');

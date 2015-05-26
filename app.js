@@ -20,11 +20,13 @@ app.set('view engine', 'ejs'); // set up ejs for templating
 
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser('secret')); // read cookies (needed for auth)
-app.use(bodyParser()); // get information from html forms
+app.use(bodyParser.json());
 
 // required for passport
 app.use(session({
     secret: 'sessionsecret',
+    resave: true,
+    saveUninitialized: true,
     cookie : {
         maxAge: 3600000
     }

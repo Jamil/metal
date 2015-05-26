@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var idValidator = require('mongoose-id-validator');
 
 var Schema = mongoose.Schema;
 
@@ -30,4 +31,5 @@ var Flight = new Schema({
     }
 });
 
+Flight.plugin(idValidator);
 module.exports = mongoose.model('Flight', Flight, 'Flight');
