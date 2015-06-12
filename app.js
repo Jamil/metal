@@ -37,7 +37,7 @@ require('./config/passport')(passport);
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
-app.use(express.static(path.join(application_root, "public")));
+app.use("/public", express.static(path.join(__dirname, 'public')));
 
 var routes = require('./routes')(app, passport);
 
