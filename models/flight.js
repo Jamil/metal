@@ -28,6 +28,13 @@ var Flight = new Schema({
     fare_class: {
         type: String,
         ref: 'FareClass'
+    },
+    distance: Number,
+    credit: {
+        miles: Number,
+        segments: Number,
+        points: Number,
+        spend: Number
     }
 });
 

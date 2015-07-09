@@ -20,7 +20,7 @@ app.set('view engine', 'ejs'); // set up ejs for templating
 
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser('secret')); // read cookies (needed for auth)
-app.use(bodyParser.json());
+app.use(bodyParser());
 
 // required for passport
 app.use(session({
